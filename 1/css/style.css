@@ -1,0 +1,50 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    background: #A9A9A9;
+}
+
+h1, p, #neutral {
+    font-family: 'Francois One', sans-serif;
+    font-size: 20px;
+    color: #000000;
+}
+
+#formula-div {
+    font-family: 'Francois One', sans-serif;
+    display: block;
+	background: #DDA0DD;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#answer{
+    color: #000000;
+}
+
+.btn-check {
+    border: 1px solid black;
+    background-color: #DDA0DD;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Francois One', sans-serif;
+    border-color: #000000;
+    color: #000000;
+}
+
+.output-field {
+    font-family: 'Francois One', sans-serif;
+    font-size: 20px;
+    color: #000000;
+}
