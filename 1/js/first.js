@@ -1,5 +1,5 @@
 /**
- * Created by karina on 28-01-2018.
+ * Created by Tsvik.
  */
 var formula = "";
 var subformulaAnswer = 0;
@@ -19,8 +19,6 @@ var subformulaNumber = 0;
 var subformulas = [];
 var neutrality;
 
-//runs main algorithm
-//author: Жигимонт К., гр. 521702
 function run() {
     clear();
 
@@ -31,13 +29,11 @@ function run() {
         alert("Please input a valid formula");
         return 0;
     }
-    //subformulaAnswer = document.getElementById("subFormulaNumber").value;
     subformulaCount = getNumberOfSubformulas();
-    document.getElementById("output-field").innerHTML = "<p id='wrong-answer'>The correct answer is "
+    document.getElementById("output-field").innerHTML = "<p id='answer'>The correct answer is "
             + subformulaCount + " </p>";
     }
 
-//author: Ковальчук В., гр. 521701
 function getNumberOfSubformulas() {
     var formulaClone = formula;
     Formula = formula;
@@ -45,31 +41,13 @@ function getNumberOfSubformulas() {
     return subformulaNumber;
 }
 
-//author: Жигимонт К., гр. 521702
 function clear() {
     document.getElementById("formula").innerHTML = "";
     document.getElementById("output-field").innerHTML = "";
     formula = "";
 }
 
-//author: Жигимонт К., гр. 521702
-/*function checkAnswer() {
-    if (subformulaCount == subformulaAnswer) {
-        document.getElementById("output-field").innerHTML = "<p id='correct-answer'>Subformula number is correct!</p>";
-    } else {
-        document.getElementById("output-field").innerHTML = "<p id='wrong-answer'>You got subformula number wrong, the correct answer is "
-            + subformulaCount + ".</p>";
-    }
-
-    if (isNeutralAnswer == createTruthTable(formula)) {
-        document.getElementById("output-field").innerHTML += "<p id='correct-answer'>Neutrality answer is correct!</p>";
-    } else {
-        document.getElementById("output-field").innerHTML += "<p id='wrong-answer'>You got neutrality answer wrong.</p>";
-    }
-}*/
-
 //add subformula to subformula list if it's new
-//author: Ковальчук В., гр. 521701
 function addToSubformulas(subformula) {
     var firstTime = true;
     for (var i = 0; i < subformulaNumber; i++) {
@@ -85,7 +63,6 @@ function addToSubformulas(subformula) {
 }
 
 //search all subformulas in a formula
-//author: Ковальчук В., гр. 521701
 function searchSubformulas(formula) {
     var result = formula.match(AtomarOrConstantFormula, 'g');
     for (var i = 0; i < result.length; i++) {
@@ -115,7 +92,6 @@ function searchSubformulas(formula) {
 }
 
 //check if the formula is correct
-//author: Жигимонт К., гр. 521702
 function isFormula() {
     var tempFormula;
     var formulaClone = formula;

@@ -3,24 +3,54 @@
 <head>
     <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
-    <title>LOIS lab №1</title>
+    <title>LOIS lab #1-2</title>
     <script src="js/first.js"></script>
+        <script src="js/lab2.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
+<script type="text/javascript">
+    
+        function clickOnButton(){
+            var formula = document.getElementById('formula').value;
+            var output = document.getElementById("output");
+            var sknf = document.getElementById("sknf");
+                var object = getSKNF(formula)
+                sknf.innerHTML = object.sknf;
+                var tbody = document.getElementById('tbody');
+                tbody.innerHTML = objectToTable(object.table, object.unicsymbolSize);
+        }
+    </script>
 <body>
-<h1>Lab #1</h1>
+<h1>Lab #1-2</h1>
 <div id="task"><p>
     A. Count subformulas in a formula<br></p>
 </div>
 <div id="formula-div">
     <p>Formula:</p> <input type="text" name="formula" id="formula"><br>
-
 </div>
 <br>
-<div id="answerField">
+<div id="answerField1">
     <button class="btn-check" onclick="run()">Answer</button>
 </div>
 <div id="output-field">
 </div>
+        <hr>
+        <div id="task"><p>8. Build SKNF for the formula<br></p></div>
+              
+<div id="answerField2">
+    <button class="btn-check" onclick="clickOnButton()">Build</button>
+</div>
+
+        <br>
+
+<div id="task"><p>SKNF for the formula:<br></p></div>
+        <div id="sknf">---</div>
+
+<div id="task"><p>Table for the formula:<br></p></div>
+
+        <table border="1">
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
 </body>
 </html>
